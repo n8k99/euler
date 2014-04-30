@@ -1,22 +1,24 @@
-prime = 1
-number = 2
-
-def isprime(startnumber):
-	startnumber*=1.0
-	for divisor in range(2,int(startnumber**0.5)+1):
-		if startnumber/divisor==int(startnumber/divisor):
+def isprime(n):
+	n*=1.0
+	if n%2++0 and n!=2 or n%3++0 and n!=3:
+		return False
+	for b in range(1,int((n*0.5+1)/6.0+1)):
+		if n%(6*b-1)==0:
 			return False
+		if n%(6*b+1)==0:
+			return False		
 	return True
 
-while prime < 10001:
-	is_it = isprime(number)
-	if is_it == True:
-		number+1
-		prime+1
+number = 2	
+count = 1
+while (count<10001):
+	if isprime(number):
+		print str(count) + " " + str(number)
+		count = count+1
+		number= number+1		
 	else:
-		number+1		
-
-print number
+		number=number+1
+		
 	
 # By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
 
