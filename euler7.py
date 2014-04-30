@@ -8,24 +8,25 @@
 #further to find out how to do this.
 def isprime(n):
 	n*=1.0
-	if n%2++0 and n!=2 or n%3++0 and n!=3:
-		return False
-	for b in range(1,int((n*0.5+1)/6.0+1)):
-		if n%(6*b-1)==0:
+	for divisor in range(2,int(n**0.5)+1):
+		if n/divisor==int(n/divisor):
 			return False
-		if n%(6*b+1)==0:
-			return False		
-	return True
+	return True		
+
+
 
 number = 2	
 count = 1
-while (count<10001):
+while (count<10002):
 	if isprime(number):
 		print str(count) + " " + str(number)
 		count = count+1
 		number= number+1		
 	else:
 		number=number+1
+'''for a in range(2,100):
+	if isprime(a):
+		print a	'''	
 		
 	
 
