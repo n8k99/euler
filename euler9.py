@@ -5,23 +5,21 @@ For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.'''
-from math import pow, sqrt
+#from math import pow, sqrt
 
-def square(x):
-	x=x*x
-	return x
+#def square(x):	return x*x
 
-a = 3
-b = 4
-a= square(a)
-b=b*b
-c=a+b
-print c
-print a+b+c
-print a*b*c
+#a = 3
+#b = 4
+#a= square(a)
+#b=b*b
+#c=a+b
+#print c
+#print a+b+c
+#print a*b*c
 
 
-print math.pow(a,2)
+#print math.pow(a,2)
 
 ''' List of Triples where a, b, & c are less than 1000'''
 
@@ -57,3 +55,14 @@ list_of_triple = [(3,4,5), (5,12,13), (7,24,25), (8,15,17), (9,40,41),
 (455,528,697), (464,777,905), (468,595,757), (473,864,985), (481,600,769),
 (504,703,865), (533,756,925), (540,629,829), (555,572,797), (580,741,941),
 (615,728,953), (616,663,905), (696,697,985)]
+
+
+def multiply_threes(a,b,c): return a*b*c
+
+def sum_threes(a,b,c): return a+b+c
+
+for i in sorted(list_of_triples[i]):
+	if sum_threes(list_of_triples[i])==1000:
+		print multiply_threes(list_of_triples[i])
+		
+		
