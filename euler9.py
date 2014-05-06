@@ -7,12 +7,12 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.'''
 
 
+def sum_threes(a,b,c): return a+b+c
 def find_a(m,n): return n*n - m*m
 def find_b(m,n): return 2*n*m
 def find_c(m,n): return n*n + m*m
-def find_sum(m,n): find_a(m,n)+find_b(m,n)+find_c(m,n))
+def find_sum(m,n): return sum_threes(find_a(m,n),find_b(m,n),find_c(m,n))
 def find_product(m,n): return find_a(m,n)*find_b(m,n)*find_c(m,n)
-
 
 for i in range(1,55):
 	n = i
@@ -20,5 +20,4 @@ for i in range(1,55):
 	if find_sum(m,n) == 1000:
 		if find_product(m,n) >0:
 		 print m, n, find_product(m,n)
-
-print find_a(5,20), find_b(5,20), find_c(5,20)	#gives the sides of the triangle		
+			
